@@ -1,0 +1,16 @@
+# Here you can define all your datasets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+cambridge:
+  type: pandas.CSVDataset
+  filepath: data_etl/1_transform/cambridge.csv
+  save_args:
+    index: False
+
+union:
+  type: pandas.CSVDataset
+  filepath: data_etl/2_load/union.csv
+  save_args:
+    index: False

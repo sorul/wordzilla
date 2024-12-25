@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "wordzilla"
+version = "0.1.0"
+description = ""
+authors = [
+  "sorul <cromerovargas2d@gmail.com>",
+  "smaaguero <____@gmail.com>"
+]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+kedro = "^0.19.10"
+pandas = "^2.2.3"
+kedro-datasets = "^5.1.0"
+openpyxl = "^3.1.5"
+python-telegram-bot = "^21.9"
+
+[tool.poetry.group.dev.dependencies]
+freezegun = "^1.5.1"
+flake8-print = "^5.0.0"
+flake8-pie = "^0.16.0"
+flake8-string-format = "^0.3.0"
+flake8-unused-arguments = "^0.0.13"
+flake8-literal = "^1.4.0"
+flake8-multiline-containers = "^0.0.19"
+flake8-newspaper-style = "^0.4.3"
+flake8-annotations-complexity = "^0.0.8"
+flake8-cognitive-complexity = "^0.1.0"
+flake8-functions = "^0.0.8"
+flake8-docstrings = "^1.7.0"
+flake8-pytest = "^1.4"
+ipython = "^8.27.0"
+autopep8 = "^2.3.1"
+
+[tool.kedro]
+package_name = "wordzilla"
+project_name = "wordzilla"
+kedro_init_version = "0.19.10"
+tools = "['None']"
+example_pipeline = "False"
+source_dir = "src"
+
+[project.entry-points."kedro.hooks"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.kedro_telemetry]
+project_id = "ade393bad814496db0925f5e6352ae32"

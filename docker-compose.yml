@@ -1,0 +1,13 @@
+services:
+  wordzilla_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wordzilla
+    container_name: wordzilla_bot
+    env_file:
+      - .env
+    command: [ "python", "-c", "from wordzilla.telegrambot import run_bot; run_bot()" ]
+    # command: [ "/bin/bash", "-c", "while true; do sleep 30; done;" ]
+    stop_signal: SIGTERM
+    restart: always
